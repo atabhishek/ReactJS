@@ -1,0 +1,5 @@
+can not declare variable inside
+can not declare function inside
+can not use loops(for/while/do while)--->alternatively we can use  map and filter function
+can not use if-else--->alternatively we can use ternary operator
+can not render object----> we can render array

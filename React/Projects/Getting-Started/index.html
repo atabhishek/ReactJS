@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<!-- Plain React -->
+<!-- <script>
+    
+    let root = document.getElementById('root');
+    let ele = React.createElement('h1', { children: ['Hello'] })
+    console.log(ele);
+    ReactDOM.render(ele, root);
+</script> -->
+<!-- Using  Functional Component -->
+
+<script type="text/babel">
+
+    function Element({ name = 'default', place = 'idk' }) {
+
+        // console.log('props:',props);
+        return <div>
+            <h1>Hello {name}</h1>
+            <h6>{place}</h6>
+        </div>
+    }
+
+    function Main() {
+
+        return (
+            <React.Fragment>
+
+                <Element name='Abhishek' place ='Patna' />
+                <Element />
+                <Element />
+                <Element />
+                <Element />
+
+            </React.Fragment>)
+    }
+
+    ReactDOM.render(<Main />, document.getElementById('root'));
+    // ReactDOM.render(<Element />, document.getElementById('root'));
+</script>
+
+</html>
